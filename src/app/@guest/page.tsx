@@ -19,10 +19,6 @@ const Page: FC<{}> = () => {
                     <AlertTitle>Attention</AlertTitle>
                     Using the website is technically considered cheating.
                 </Alert>
-                <Stack direction="row" sx={{ position: "absolute", bottom: "20px", right: "20px" }} gap={1}>
-                    <GitHubIcon />
-                    <Typography>Source code: <Link href="https://github.com/jGabor94/PuzzleGallery">PuzzleGallery repository</Link></Typography>
-                </Stack>
             </Stack>
         </Fragment>
     )

@@ -24,7 +24,7 @@ const Footer: FC<{}> = () => {
                 <Divider flexItem orientation="vertical" />
                 <Stack direction="row" gap={0.5} alignItems="center">
                     <GitHubIcon sx={{ width: 20 }} />
-                    <Link href="https://github.com/jGabor94/PuzzleGallery">Source code</Link>
+                    <Link href="https://github.com/jGabor94/CH-Save-Manager">Source code</Link>
                 </Stack>
             </Stack>
         </ThemeProvider >
