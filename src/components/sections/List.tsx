@@ -22,7 +22,9 @@ const List: FC<{}> = () => {
 
     const handleCopy = (text: string) => {
         navigator.clipboard.writeText(text)
-        setAlert({ severity: "info", content: "Mentés vágólapra másolva" })
+        setAlert({
+            severity: "info", content: "Save copied to the clipboard"
+        })
     }
 
     const handleDelete = async (_id: string) => {
