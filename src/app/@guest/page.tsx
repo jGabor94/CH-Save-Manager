@@ -1,6 +1,5 @@
-import { Alert, AlertTitle, Box, Link, Stack, Typography } from "@mui/material";
+import { Alert, AlertTitle, Box, Stack, Typography } from "@mui/material";
 import { FC, Fragment } from "react";
-import GitHubIcon from '@mui/icons-material/GitHub';
 import GoogleSignInButton from "@/components/GoogleSignInButton";
 
 const Page: FC<{}> = () => {
