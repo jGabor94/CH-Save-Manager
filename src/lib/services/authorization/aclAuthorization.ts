@@ -1,7 +1,7 @@
 import { Session } from "next-auth";
 import { Acl, AclCB, crud, permission } from "./types";
 import { createServerActionResponse } from "@/lib/assets/serverAction/response/response";
-import { Next } from "@/lib/assets/serverAction/createServerAction/createServerAction";
+import { Next } from "@/lib/assets/serverAction/createServerAction/types";
 
 
 

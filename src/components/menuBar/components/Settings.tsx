@@ -12,7 +12,7 @@ import DarkMode from "@/components/DarkMode";
 const Settings: FC<{}> = () => {
 
     const { data: session } = useSession()
-    console.log(session)
+
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);

@@ -1,5 +1,5 @@
 import mongoose, { Schema, SchemaTimestampsConfig, Types } from 'mongoose';
-import { AnyObject, Email, ExpandObject, ThemeMode } from '../types/types';
+import { ExpandObject, ThemeMode } from '../types/types';
 import { Acl } from '../services/authorization/types';
 
 export interface UserConfig {

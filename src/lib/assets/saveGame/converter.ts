@@ -6,6 +6,10 @@ export interface SaveGame {
     readPatchNumber: string
 }
 
+/*
+    Dekódolt mentés objektum módosítása paltrform szerint.
+*/
+
 const converter = {
     "pc": (data: SaveGame): SaveGame => ({
         ...data,
@@ -20,6 +24,11 @@ const converter = {
         readPatchNumber: data.readPatchNumber.length > 5 ? "1.0e12-" + data.readPatchNumber.slice(-4) : "1.0e12"
     }),
 }
+
+
+/*
+    Dekódolás -> konvertálás -> enkódolás
+*/
 
 export const convert = (str: string) => {
     const data = decode(str);

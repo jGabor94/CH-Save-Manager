@@ -2,9 +2,6 @@ import { Box, Divider, Link, Stack, ThemeProvider } from "@mui/material";
 import { FC } from "react";
 import { FooterTheme } from "@/lib/mui/themes";
 import PrivacyPolicy from "./components/PrivacyPolicy";
-import { SWRProvider } from "@/app/_providers/providers";
-import { toSerializableObject } from "@/lib/assets/assets";
-import { Mongoose_ChangeLog_Serializable } from "@/lib/database/mongooseSchema";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ChangeLog from "./components/changeLog/ChangeLog";
 

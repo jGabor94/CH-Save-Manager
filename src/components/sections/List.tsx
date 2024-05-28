@@ -1,7 +1,7 @@
 "use client"
 
 import useSaveGames from "@/lib/hooks/useSaveGames";
-import { IconButton, Paper, Stack, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, Tooltip, } from "@mui/material";
+import { IconButton, Stack, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, Tooltip, } from "@mui/material";
 import { FC, useState } from "react";
 import SnackbarAlert, { SnackbarAlertData } from "../SnackbarAlert";
 import ComputerIcon from '@mui/icons-material/Computer';

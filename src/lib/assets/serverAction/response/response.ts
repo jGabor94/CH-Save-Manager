@@ -2,10 +2,9 @@ import httpStatus from "http-status"
 import { ExpandObject } from "@/lib/types/types"
 import { ServerActionResponse, ServerActionResponseConfig } from "./types"
 
-
-
-
-
+/*
+    Alapértelemezett válaszobjektum. Ezek az értékek lesznek felülírva.
+*/
 const defaultConfig: Required<ServerActionResponseConfig> = {
     status: 200,
     payload: null,
@@ -13,8 +12,9 @@ const defaultConfig: Required<ServerActionResponseConfig> = {
 }
 
 
-
-
+/*
+    Válaszobjetum előállítása
+*/
 export const createServerActionResponse = <T extends ServerActionResponseConfig>(cfg?: T): ExpandObject<ServerActionResponse<T>> => {
 
     const config = { ...defaultConfig, ...cfg }

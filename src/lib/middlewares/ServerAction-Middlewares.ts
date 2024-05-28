@@ -1,7 +1,11 @@
 import { Session } from 'next-auth'
-import { Next } from '../assets/serverAction/createServerAction/createServerAction'
 import { auth } from '../services/authentication/auth'
 import { createServerActionResponse } from '../assets/serverAction/response/response'
+import { Next } from '../assets/serverAction/createServerAction/types'
+
+/*
+  Felhasználó authentikációjának elleőrzése
+*/
 
 export const isLogged = async (next: Next, req: { session: Session }) => {
   const session = await auth()
