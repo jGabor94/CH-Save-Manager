@@ -5,9 +5,8 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import { Avatar, Box, Divider, IconButton, Modal, Paper, Stack, Tooltip, Typography } from "@mui/material";
 import { useSession } from "next-auth/react";
 import SignOutButton from "./SignOutButton";
-import DarkMode from "@/components/DarkMode";
-
-
+import NumberFormatSwitch from "./components/NumberFormatSwitch";
+import DarkModeSwitch from "./components/DarkModeSwitch";
 
 const Settings: FC<{}> = () => {
 
@@ -45,7 +44,12 @@ const Settings: FC<{}> = () => {
                         <Divider flexItem />
                         <Stack direction="row" justifyContent="space-between" alignItems="center">
                             <Typography>Dark mode:</Typography>
-                            <DarkMode />
+                            <DarkModeSwitch />
+                        </Stack>
+                        <Divider flexItem />
+                        <Stack direction="row" justifyContent="space-between" alignItems="center">
+                            <Typography>Scientific notation:</Typography>
+                            <NumberFormatSwitch />
                         </Stack>
                         <Divider flexItem />
                         <Stack gap={2} >

@@ -1,5 +1,6 @@
 import mongoose, { Model } from 'mongoose';
-import { Mongoose_Account, Mongoose_ChangeLog, Mongoose_SaveGame, Mongoose_User, accountSchema, changeLogSchema, saveGameSchema, userSchema } from './mongooseSchema';
+import { accountSchema, changeLogSchema, saveGameSchema, userSchema } from './mongooseSchema';
+import { Mongoose_Account, Mongoose_ChangeLog, Mongoose_SaveGame, Mongoose_User } from './types';
 
 
 export const User: Model<Mongoose_User> = mongoose.models.User || mongoose.model<Mongoose_User>('User', userSchema)

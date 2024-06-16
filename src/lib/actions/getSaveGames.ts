@@ -6,8 +6,8 @@ import { createServerActionResponse } from "../assets/serverAction/response/resp
 import { dbConnect } from "../database/dbConnect"
 import { SaveGame } from "../database/models"
 import { isLogged } from "../middlewares/ServerAction-Middlewares"
-import { Mongoose_SaveGame_Serializable } from "../database/mongooseSchema"
-import { toSerializableObject } from "../assets/assets"
+import { toSerializableObject } from "../assets/general"
+import { Mongoose_SaveGame_Serializable } from "../database/types"
 
 interface Request {
     session: Session

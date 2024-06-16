@@ -6,9 +6,10 @@ import { FC, useState } from "react";
 import SnackbarAlert, { SnackbarAlertData } from "../SnackbarAlert";
 import ComputerIcon from '@mui/icons-material/Computer';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
-import ClearIcon from '@mui/icons-material/Clear';
 import SA_DeleteSaveGame from "@/lib/actions/deleteSaveGame";
 import Card from "../Card";
+import Statistics from "./List/components/Result/Statistics";
+import { ClearIcon } from "@mui/x-date-pickers";
 
 
 const List: FC<{}> = () => {
@@ -57,7 +58,7 @@ const List: FC<{}> = () => {
         <Card title="List" >
             <TableContainer sx={{ width: "100%", height: "fit-content", maxHeight: 700 }}>
                 <SnackbarAlert {...{ alert, setAlert }} />
-                <Table aria-label="save game list" size="small" sx={{ borderSpacing: "0 0 !important" }}   >
+                <Table size="small" sx={{ borderSpacing: "0 0 !important" }}   >
                     <TableHead>
                         <TableRow>
                             <TableCell align="center">Date</TableCell>
@@ -92,11 +93,14 @@ const List: FC<{}> = () => {
 
                                 </TableCell>
                                 <TableCell sx={{ padding: 1 }} >
-                                    <Tooltip title="Delete">
-                                        <IconButton size="small" onClick={() => handleDelete(save._id)} sx={{ gap: 0.5 }} disabled={progress}>
-                                            <ClearIcon fontSize="small" />
-                                        </IconButton>
-                                    </Tooltip>
+                                    <Stack direction="row" justifyContent="center" >
+                                        <Statistics rawSaveGame={save.pc} saveName={save.name} />
+                                        <Tooltip title="Delete">
+                                            <IconButton size="small" onClick={() => handleDelete(save._id)} sx={{ gap: 0.5 }} disabled={progress}>
+                                                <ClearIcon fontSize="small" />
+                                            </IconButton>
+                                        </Tooltip>
+                                    </Stack>
                                 </TableCell>
                             </TableRow>
                         ))}

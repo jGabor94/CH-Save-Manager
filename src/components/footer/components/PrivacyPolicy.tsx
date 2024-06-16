@@ -4,8 +4,6 @@ import { FC, Fragment, useState } from "react"
 import { Box, Divider, Link, Modal, Paper, Stack, Typography } from "@mui/material";
 import Contact from "./Contact";
 
-
-
 const PrivacyPolicy: FC<{}> = () => {
 
     const [open, setOpen] = useState(false);

@@ -6,8 +6,8 @@ import { auth } from "@/lib/services/authentication/auth";
 import List from "@/components/sections/List";
 import Info from "@/components/sections/Info";
 import Selector from "@/components/sections/Selector";
-import { Mongoose_SaveGame_Serializable } from "@/lib/database/mongooseSchema";
-import { toSerializableObject } from "@/lib/assets/assets";
+import { toSerializableObject } from "@/lib/assets/general";
+import { Mongoose_SaveGame_Serializable } from "@/lib/database/types";
 
 
 const Home: FC<{}> = async () => {

@@ -1,4 +1,4 @@
-import { ThemeMode } from "@/lib/types/types";
+import { ThemeMode } from "@/lib/database/types";
 
 export interface IColorModeContext {
     toggleColorMode: () => void,

@@ -1,10 +1,10 @@
 import { Types } from "mongoose"
 import NextAuth from "next-auth"
-import { Mongoose_User, Mongoose_User_Serializable, UserConfig } from "../database/mongooseSchema"
 import { JWT } from "next-auth/jwt";
 import NextAuth, { type DefaultSession, type User } from "next-auth";
 import type { AdapterSession, AdapterUser } from "next-auth/adapters";
 import { Email } from "./types";
+import { Mongoose_User } from "../database/types";
 
 interface TokenUserData {
     _id: string,

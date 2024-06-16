@@ -4,12 +4,7 @@ import { Divider, Link, Stack, Typography } from "@mui/material"
 import { FC } from "react"
 import Card from "../Card"
 
-
-
-
 const Info: FC<{}> = () => {
-
-
 
     return (
         <Card title="Info">

@@ -1,10 +1,30 @@
-import { decode, encode } from "./coder";
+import { SaveGame } from "./types";
+import { deflateRawSync, inflateRawSync } from "node:zlib";
 
-export interface SaveGame {
-    rubies: number,
-    saveOrigin: "pc" | "mobile",
-    readPatchNumber: string
+
+const hash = "7e8bb5a89f2842ac4af01b3b7e228592";
+
+
+/*
+    Mentés dekódolása szerver oldalon
+*/
+export const decode = (str: string): SaveGame => {
+    const body = str.toString().slice(32);
+    const compressed = Buffer.from(body, "base64");
+    const json = inflateRawSync(compressed).toString();
+    return JSON.parse(json);
 }
+
+
+/*
+   Mentés enkódölása szerver oldalon
+*/
+export const encode = (data: SaveGame) => {
+    const json = JSON.stringify(data);
+    const compressed = deflateRawSync(json);
+    return hash + compressed.toString("base64");
+}
+
 
 /*
     Dekódolt mentés objektum módosítása paltrform szerint.
@@ -38,6 +58,6 @@ export const convert = (str: string) => {
     return {
         data: encode(temp2),
         from: outLabel,
-        to: temp2.saveOrigin
+        to: temp2.saveOrigin,
     }
 }

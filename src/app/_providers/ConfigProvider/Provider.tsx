@@ -1,8 +1,8 @@
 "use client"
 
-import { UserConfig } from "@/lib/database/mongooseSchema";
 import { FC, ReactNode } from "react";
 import { ConfigContext } from "../Context/context";
+import { UserConfig } from "@/lib/database/types";
 
 
 const Provider: FC<{ children: ReactNode, config: UserConfig }> = ({ children, config }) => {

@@ -2,7 +2,7 @@
 
 import { Theme, createTheme } from "@mui/material/styles"
 import { NotoSans } from "./fonts"
-import { ThemeMode } from "../types/types";
+import { ThemeMode } from "../database/types";
 
 export const RootTheme = (mode: ThemeMode) => createTheme({
     typography: {

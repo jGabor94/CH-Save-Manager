@@ -4,8 +4,8 @@ import { createServerAction } from "../assets/serverAction/createServerAction/cr
 import { createServerActionResponse } from "../assets/serverAction/response/response"
 import { dbConnect } from "../database/dbConnect"
 import { ChangeLog } from "../database/models"
-import { Mongoose_ChangeLog_Serializable } from "../database/mongooseSchema"
-import { toSerializableObject } from "../assets/assets"
+import { toSerializableObject } from "../assets/general"
+import { Mongoose_ChangeLog_Serializable } from "../database/types"
 
 const SA_GetChangeLogs = createServerAction(async () => {
     await dbConnect()

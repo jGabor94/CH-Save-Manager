@@ -1,4 +1,4 @@
-import { extractUsername } from "@/lib/assets/assets";
+import { extractUsername } from "@/lib/assets/general";
 import { dbConnect } from "@/lib/database/dbConnect";
 import { Account, User } from "@/lib/database/models";
 import { Email } from "@/lib/types/types";
