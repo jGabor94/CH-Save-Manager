@@ -13,8 +13,8 @@ export const RootTheme = (mode: ThemeMode) => createTheme({
         ...(mode === "light" ? {
             primary: {
                 main: "#fda502",
-                light: "#a094ee",
-                dark: "#2f2750",
+                light: "#e7b558",
+                dark: "#a76c00",
                 contrastText: '#F3F3F3'
             },
             background: {
@@ -24,8 +24,8 @@ export const RootTheme = (mode: ThemeMode) => createTheme({
         } : {
             primary: {
                 main: "#fda502",
-                light: "#7a6dcf",
-                dark: "#483a81",
+                light: "#e7b558",
+                dark: "#a76c00",
                 contrastText: '#F3F3F3'
             },
             background: {
