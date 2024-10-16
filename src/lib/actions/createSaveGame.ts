@@ -1,12 +1,12 @@
 "use server"
 
 import { Session } from "next-auth"
+import { convert } from "../assets/saveGame/converter"
 import { createServerAction } from "../assets/serverAction/createServerAction/createServerAction"
 import { createServerActionResponse } from "../assets/serverAction/response/response"
 import { dbConnect } from "../database/dbConnect"
 import { SaveGame } from "../database/models"
 import { isLogged } from "../middlewares/ServerAction-Middlewares"
-import { convert } from "../assets/saveGame/converter"
 import { saveGameAcl } from "../services/authorization/acl"
 
 interface Request {
@@ -35,3 +35,10 @@ const SA_CreateSaveGame = createServerAction(isLogged, async ({ params, session 
 
 
 export default SA_CreateSaveGame
+
+const userSetLinkSchema = new mongoose.Schema({
+    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+    favorite: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Set' }],
+    owned: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Set' }],
+    learned: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Set' }],
+}, { timestamps: true });
