@@ -1,6 +1,6 @@
-import Google from "next-auth/providers/google"
-import NextAuth from "next-auth"
 import { mongooseAdapter } from "@/lib/services/authentication/NextAuth_adapter"
+import NextAuth from "next-auth"
+import Google from "next-auth/providers/google"
 
 export const { handlers: { GET, POST }, auth, signIn, signOut, unstable_update } = NextAuth({
     adapter: mongooseAdapter as any,
