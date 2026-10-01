@@ -1,5 +1,6 @@
 "use server"
 
+import mongoose from "mongoose"
 import { Session } from "next-auth"
 import { convert } from "../assets/saveGame/converter"
 import { createServerAction } from "../assets/serverAction/createServerAction/createServerAction"
